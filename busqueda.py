@@ -12,45 +12,49 @@ libros = df.to_dict(orient="records")
 def elegir_autor_aleatorio(dataset):
   return random.choice(dataset)['authors']
 
-#Función de búsqueda lineal:
+# Función de búsqueda lineal:
+# Recorre la lista comparando el autor objetivo con el autor de cada elemento del dataset.
+# La comparación ignora mayúsculas y minúsculas (convierte ambos nombres a minúsculas).
 def busqueda_lineal(lista, autor_objetivo):
   for i in range(len(lista)):
-    if lista[i]['authors'].lower()== autor_objetivo.lower():
+    if lista[i]['authors'].lower() == autor_objetivo.lower():
       return i
   return -1
 
 #Elegir autor aleatorio
-autor_buscado=elegir_autor_aleatorio(libros)
+autor_buscado = elegir_autor_aleatorio(libros)
 
 #Medir tiempo de busqueda lineal:
 inicio=time.time()
 resultado=busqueda_lineal(libros, autor_buscado)
 fin=time.time()
-tiempo_busqueda_lineal=fin - inicio
+tiempo_busqueda_lineal = fin - inicio
 
 
 
 #Búsqueda binaria:
 
-#Ordenar lista alfabeticamente
+# Ordenar la lista alfabéticamente por autor (ignorando mayúsculas/minúsculas)
 libros_ordenados= sorted(libros, key=lambda x: x['authors'].lower())
 
-#Función de búsqueda binaria:
+# Función de búsqueda binaria:
+# Requiere una lista ordenada alfabéticamente por autor (en minúsculas para comparación insensible a mayúsculas).
+# Utiliza un bucle while para dividir la lista en mitades hasta encontrar el autor buscado o agotar las posibilidades.
 def busqueda_binaria(lista, autor_objetivo):
   izquierda, derecha= 0, len(lista) -1
-  objetivo= autor_objetivo.lower()
+  objetivo = autor_objetivo.lower()
 
   while izquierda <= derecha:
-    mitad= (izquierda + derecha) // 2 
+    mitad = (izquierda + derecha) // 2 
     autor_mitad= lista[mitad]['authors'].lower()
 
     if autor_mitad == objetivo:
       return mitad #retorna el valor del medio (mejor caso)
     elif autor_mitad < objetivo:
-      izquierda= mitad +1 #como el autor_objetivo esta en un lugar 'mayor', nos movemos un lugar hacia la derecha (+1)
+      izquierda = mitad +1 # El autor está en la mitad derecha
     else:
-      derecha= mitad -1
-  return -1      
+      derecha= mitad -1 # El autor está en la mitad izquierda
+  return -1       # Autor no encontrado
 
 # Medir tiempo de búsqueda binaria
 inicio_binaria = time.time()
