@@ -11,7 +11,8 @@ def bubble_sort(lista):
 
 
 # Divide la lista en mitades hasta que cada lista tenga un solo elemento,
-# se utiliza la recursividad y un condicional que verifica cuando exista un elemento en la lista y da por finalizada la recursión
+# se utiliza la recursividad y un condicional que verifica cuando exista un
+#  elemento en la lista y da por finalizada la recursión
 def merge_sort(lista):
     # Condición para detener la recursión
     if len(lista) == 1:
@@ -45,7 +46,8 @@ def merge(izquierda, derecha):
             j += 1
 
     # El while finaliza cuando una de las listas se ha recorrido completamente
-    # La otra lista puede aun contener elementos, que serán agregados a continuación en la lista nueva
+    # La otra lista puede aun contener elementos, que serán agregados a
+    #  continuación en la lista nueva
     lista_ordenada.extend(izquierda[i:])
     lista_ordenada.extend(derecha[j:])
 

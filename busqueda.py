@@ -38,8 +38,10 @@ tiempo_busqueda_lineal = fin - inicio
 libros_ordenados= sorted(libros, key=lambda x: x['authors'].lower())
 
 # Función de búsqueda binaria:
-# Requiere una lista ordenada alfabéticamente por autor (en minúsculas para comparación insensible a mayúsculas).
-# Utiliza un bucle while para dividir la lista en mitades hasta encontrar el autor buscado o agotar las posibilidades.
+# Requiere una lista ordenada alfabéticamente por autor (en minúsculas para 
+# comparación insensible a mayúsculas).
+# Utiliza un bucle while para dividir la lista en mitades hasta encontrar 
+# el autor buscado o agotar las posibilidades.
 def busqueda_binaria(lista, autor_objetivo):
   izquierda, derecha= 0, len(lista) -1
   objetivo = autor_objetivo.lower()
@@ -60,7 +62,7 @@ def busqueda_binaria(lista, autor_objetivo):
 inicio_binaria = time.time()
 resultado_binaria = busqueda_binaria(libros_ordenados, autor_buscado)
 fin_binaria = time.time()
-tiempo_busqueda_binaria=fin_binaria - inicio_binaria
+tiempo_busqueda_binaria=fin_binaria - inicio_binaria 
 
 
 
@@ -77,7 +79,7 @@ print("\n")
 #Resultado binario:
 print('Tiempo de ejecución con una busqueda binaria')
 if resultado_binaria != -1:
-  print(f"Autor: {libros_ordenados[resultado_binaria]['authors']}. Posición: {resultado_binaria}")
+  print(f"Autor: {libros[resultado_binaria]['authors']}. Posición: {resultado_binaria}")
 else:
   print('Autor no encontrado.')
 print(f"Tiempo de búsqueda binaria: {tiempo_busqueda_binaria:.6f} segundos")
