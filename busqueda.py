@@ -27,3 +27,7 @@ def busqueda_binaria(lista, autor_objetivo):
     else:
       derecha= mitad -1 # El autor está en la mitad izquierda
   return -1       # Autor no encontrado
+
+
+
+

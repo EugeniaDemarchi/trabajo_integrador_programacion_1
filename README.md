@@ -31,3 +31,7 @@ Se implementaron y compararon los siguientes algoritmos:
 - Python 3.11
 - Pandas (para manipulación del dataset)
 - time (para medición de tiempos de ejecución)
+
+## Enlace al video presentación
+
+https://youtu.be/p0fY18V4uUg?si=aYKAQm3W0-0VaM7r
