@@ -1,9 +1,12 @@
 # Trabajo Integrador - Algoritmos de Búsqueda y Ordenamiento
 
-Este proyecto corresponde al trabajo integrador de la materia **Programación** de la **Tecnicatura Universitaria en Programación a Distancia** de la **UTN**.
+Este proyecto corresponde al trabajo integrador de la materia **Programación 1** de la **Tecnicatura Universitaria en Programación a Distancia** de la **UTN**.
 
 ---
-
+## Integrantes
+- Demarchi, Eugenia - Comisión 2
+- Rege, María Soledad - Comisión 20
+---
 ## Descripción
 
 El objetivo de este trabajo es simular un sistema de catálogo de libros y aplicar distintos algoritmos de búsqueda y ordenamiento para gestionar eficientemente los datos. Se utiliza un dataset real obtenido de Kaggle con información de libros (título, autor, páginas, valoración, etc.) para realizar pruebas de eficiencia.
@@ -24,7 +27,7 @@ Se implementaron y compararon los siguientes algoritmos:
 - `busqueda.py`: Contiene las implementaciones de los algoritmos de búsqueda.
 - `ordenamiento.py`: Contiene las implementaciones de los algoritmos de ordenamiento.
 
----
+Además, se agrega un archivo PDF con todo el marco teórico y posterior análisis del código, resultados y conclusiones.
 
 ## Tecnologías y librerías utilizadas
 
